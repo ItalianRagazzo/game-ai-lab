@@ -21,8 +21,11 @@ import itertools
 def best_hand(hand):
     "From a 7-card hand, return the best 5 card hand."
     # Your code here
-    pass
+    possible_hands = list(itertools.combinations(hand, 5))
     
+    best_hand = max(possible_hands, key=hand_rank)
+
+    return best_hand    
 # ------------------
 # Provided Functions
 # 
