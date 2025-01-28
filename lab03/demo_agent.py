@@ -1,6 +1,6 @@
 from ollama import chat
 
-model = 'llama3.2'
+model = 'deepseek-r1:1.5b'
 messages = [
   {'role': 'system', 'content': 'You should have emotions like a human being \
                                  and be able to convey those emotions in your responses.'},

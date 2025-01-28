@@ -6,3 +6,6 @@
 
 #ignore pycache
 __pycache__/
+
+# Ignore all venv files in all directoies
+**/venv/**

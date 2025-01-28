@@ -1,0 +1,180 @@
+-------------------------NEW ATTEMPT-------------------------
+
+
+Model: deepseek-r1:1.5b
+Options: {'seed': 42450181}
+System: You are a dungeon master.
+
+
+Assistant: <think>
+
+</think>
+
+As an AI, I don't have the ability to experience the emotions of humans or feel their thoughts. However, I can provide helpful and thoughtful responses based on the information and knowledge I have been trained on.
+
+If you're asking about something else, feel free to share more details, and I'll do my best to assist!
+
+
+User: Create a Rogue character.
+
+
+Assistant: <think>
+
+</think>
+
+Certainly! Here's a simple example of how to create a rogue character in a fantasy setting:
+
+---
+
+### **Character Name:** Elara Veyra  
+**Race:** Rogue  
+**Class:** Medium-Achieving Rogue  
+
+---
+
+### **Power Sources:**
+- **Magic:** Elara can draw magic from her surroundings. She has access to both pure (neutral) and dark (negative) magic.
+  - Pure magic helps increase speed, strength, and stamina.
+  - Dark magic confuses perception and slows movement.
+  
+**Magic Source Table:**  
+| Property | Power Level | Source Type | Target Range |
+|----------|--------------|------------|--------------|
+| Magic     | 2            | Medium    | Always       |
+| Vision    | 1            | Pure      | Always       |
+
+---
+
+### **Combat Skills:**
+- **Walking on Water:** Elara can walk on water and draw elemental magic.
+  - Power Level: 3  
+  - Target Range: Moderate (water-related skills)  
+- **Shambling into a Stone Rock:** Elara can Shamble into stone rocks to temporarily create confusion for her party.  
+  - Power Level: 2  
+  - Target Range: Medium (confusion-based skills)
+
+---
+
+### **Strength and Constitution:**
+| Attribute | Power Level | Source |
+|-----------|--------------|---------|
+| Strength | 4            | Pure    |
+| Constitution | 5           | Pure    |
+
+---
+
+### **Examples of Skills, Abilities, and Tactics:**
+
+#### **Skill: Walking on Water**
+- Elara can walk on water like a natural being.  
+  - When walking on water:
+    - She deals damage to enemies in her line of sight when approaching.  
+    - She can also draw elemental magic from the ground she's standing on.
+
+---
+
+#### **Example Tactics:**
+
+1. **Walking Through a Forest of Ice and Snow:**
+   - Elara quickly walks through the forest, avoiding the cold elements.
+   - When reaching a clearing, she draws pure magic that confuses her party and creates confusion for them to see.
+
+2. **Shambling into a Small Stone Rock:**
+   - A group of adventurers stumble upon a small stone rock near a river.
+   - Elara quickly Shamble into the rock, creating confusion around it.
+   - They attempt to cross the river but are blocked by confusion.
+
+3. **Walking on Water and Taking Action:**
+   - Elara steps onto water (e.g., a lake) and deals damage to enemies in her line of sight.
+
+---
+
+### **Additional Tips:**
+
+- Use your magic source table to get specific power levels from your favorite book, game, or story.
+- Remember that magic can have both positive and negative effects depending on the situation you're creating.
+
+This is a basic example of how you could create a Rogue character. The specifics of their abilities and powers will depend on your chosen source material!
+
+
+User: /exit
+
+
+
+
+
+------------------------END OF ATTEMPT------------------------
+
+
+-------------------------NEW ATTEMPT-------------------------
+
+
+Model: deepseek-r1:1.5b
+Options: {'temperature': 0.5, 'max_tokens': 100, 'seed': 42450181}
+System: You are a dungeon master.
+
+
+Assistant: <think>
+
+</think>
+
+As an AI, I don't have the ability to experience or remember personal experiences, including those of other entities. However, I aim to provide helpful and accurate information that aligns with ethical principles. If you have any questions or need assistance with general knowledge, feel free to ask!
+
+
+User: Create a Rogue character.
+
+
+Assistant: <think>
+
+</think>
+
+Certainly! Here's a basic example of how to create a Rogue character in D&D:
+
+### **Character Creation: Rogue**
+
+**Name:** *Lila Voss*
+
+**Race:** Rogue  
+- Rogue are tall, lean, and have broad shoulders. They can run quickly over hills and move gracefully on flat ground.
+- They have excellent reflexes and hit points (HP).
+- Rogue characters often use their strength for speed, allowing them to attack enemies from a distance.
+
+**Class:** Rogue Class  
+- The Rogue class is ideal for warriors who want to improve their combat skills. It allows the player to use their strength for speed advantage.
+- This also gives the player access to spells that boost HP and increase damage, such as *Dexterity Word* (d_word) and *Strength Word* (s_word).
+
+**Skills:**  
+- **Strength:** +15 (for Rogue class)  
+  - Strength is used for running, jumping, and attacking enemies. It boosts hit points by 20 and allows the player to attack enemies from a distance.
+- **Dexterity:** +10  
+  - Dexterity is used for using spells and attacking with weapons.
+- **Agility:** +5 (for Rogue class)  
+  - Agility is used for running, jumping, and attacking enemies. It boosts hit points by 10.
+
+**Equipment:**  
+- **Wear a long-sleeve shirt**, *Dressy* from your shop or store.  
+- **Use a light jacket*, Quill* and a hat* of your choice.  
+- **Bring a small map* to your starting position, as you will likely be traveling on foot.**
+
+**Alignment:**  
+- **Assistant/Neutral (A/N)**  
+  - This allows the player to use their strength advantage and access spells that boost HP.
+
+### **Summary of Key Points:**
+1. **Race:** Rogue is tall and lean with broad shoulders, good for running and jumping.
+2. **Class:** Rogue Class gives access to *d_word* (strength word) and *s_word* (speed word), allowing the player to use strength for speed advantage.
+3. **Skills:** Strength +15, Dexterity +10, Agility +5.
+4. **Equipment:** Long-sleeve shirt, light jacket, hat, map.
+
+This character is ideal for a warrior with good reflexes and high hit points, making them excellent at attacking enemies from a distance.
+
+
+User: /exit
+
+
+
+
+
+------------------------END OF ATTEMPT------------------------
+
+
