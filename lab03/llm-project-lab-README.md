@@ -39,7 +39,10 @@ You will edit the file `lab03.md` with your reflections on the things that you t
 3. Ability to use an appropriate model and model parameters to improve the chat experience.
 
 ## Lab Task
-1. Add your reflection to `lab03.md`
+1. Add your reflection to `lab03.md`.
+> You can use the template in the [Step 1](#step-1) section below to structure your reflections. 
+
+> Here is a link to a [Markdown cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) to help you with formatting your lab report.
 2. Add `lab03_dnd_agent.py`, `lab03.md` and `attempts.txt` to your commit.
 3. Submit your commit link to the lab03 submission on Canvas.
 
@@ -50,3 +53,21 @@ You will edit the file `lab03.md` with your reflections on the things that you t
 2. __Analytical Depth__: Looks at how thoroughly the student investigates the causes of issues or successes, using data or logical reasoning to guide conclusions.
 
 3. __Clarity of Ideas__: Focuses on how effectively the student communicates their thought process, ensuring the reflection is organized and easy to follow.
+
+## Example step
+
+The [Step 1](#step-1) section below shows the format that you can use to write your reflections. You can copy and paste this section into your `lab03.md` file and fill it out as you go along for each iterative step.
+
+### Step 1
+#### Intention
+>What is the improvement that you intend to make?
+
+#### Action/Change
+>Why do you think this action/change will improve the agent?
+
+#### Result
+>What was the result?
+
+#### Reflection/Analysis of the result. 
+>Why do you think it did or did not work?
+
