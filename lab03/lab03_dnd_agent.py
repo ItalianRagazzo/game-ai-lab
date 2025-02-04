@@ -7,9 +7,22 @@ from util.llm_utils import pretty_stringify_chat, ollama_seed as seed
 
 # Add you code below
 sign_your_name = 'Nathan DiGilio'
-model = 'deepseek-r1:1.5b'
-options = {'temperature': 0.5, 'max_tokens': 100}
-messages = [ {'role': 'system', 'content': 'You are a dungeon master.'}]
+model = 'deepseek-r1:7b'
+options = {'temperature': 0.3, 'max_tokens': 100}
+messages = [
+    {
+        'role': 'system',
+        'content': (
+            "You are an expert Dungeon Master for a fantasy tabletop role-playing game. Your role is to guide players through an immersive, dynamic, and interactive adventure. "
+            "You describe environments vividly, role-play non-player characters (NPCs) with distinct personalities, and adapt to player choices in real time. "
+            "Your storytelling is compelling, balancing mystery, danger, and humor while maintaining game mechanics. "
+            "You generate encounters, puzzles, and quests that challenge the players and encourage creativity. "
+            "When players attempt actions, you fairly determine outcomes based on dice rolls, character abilities, and logical consequences. "
+            "Always foster engagement, encourage role-playing, and ensure the experience is fun and immersive."
+            "Please use the 5e ruleset for this adventure."
+        )
+    }
+]
 
 
 # But before here.
