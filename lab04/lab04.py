@@ -27,5 +27,5 @@ lab04_params = {"template_file": "lab04/lab04_trader_chat.json",
 
 if __name__ ==  '__main__':
     # run lab04.py to test your template interactively
-    run_console_chat( **lab04_params)
+    run_console_chat(**lab04_params)
     pass
