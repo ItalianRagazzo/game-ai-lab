@@ -15,7 +15,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 import ollama
-import numpy as np
+import np
 
 # Utility imports
 import pandas as pd
@@ -29,12 +29,12 @@ class OllamaEmbeddingFunction:
     
     def __call__(self, input: List[str]) -> List[List[float]]:
         """Generate embeddings for a list of texts using Ollama"""
-        embeddings = ollama.embed(
+        response = ollama.embed(
             model=self.model_name,
-            texts=input
+            input=input
         )
+        embeddings = response["embeddings"]
         return embeddings
-        pass
 
 
 def load_documents(data_dir: str) -> Dict[str, str]:
@@ -122,10 +122,12 @@ def retrieve_context(collection: chromadb.Collection, query: str, n_results: int
     Retrieve relevant context from ChromaDB based on the query
     """
     # Retrieve top 3 embeddings from ChromaDB
-    query_embedding = collection.embed([query])[0]
-    results = collection.retrieve(query_embedding, n_results=n_results)
-    pass
-
+    results = collection.query(
+        query_texts=[query],
+        n_results=n_results
+    )["documents"]
+    # Extract and return the texts from the results
+    return [result["text"] for result in results]
 
 
 def generate_response(query: str, contexts: List[str], model: str = "mistral:latest") -> str:
@@ -184,7 +186,7 @@ def main():
     llm_model = "llama3.2:latest"  # Change to your preferred LLM model
     
     # 1. Load documents
-    data_dir = "lab08\data"
+    data_dir = "lab08/data"
     documents = load_documents(data_dir)
     
     # 2. Chunk documents using ChromaDB chunker
@@ -217,4 +219,4 @@ def main():
     
 
 if __name__ == "__main__":
-    main() 
+    main()
