@@ -15,7 +15,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 import ollama
-import np
+import numpy as np
 
 # Utility imports
 import pandas as pd
