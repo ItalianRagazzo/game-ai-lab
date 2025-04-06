@@ -6,8 +6,10 @@ from ollama import chat
 from util.llm_utils import pretty_stringify_chat, ollama_seed as seed
 import pyttsx3
 import json
-from vosk import Model, KaldiRecognizer
-import pyaudio
+import whisper
+import sounddevice as sd
+import numpy as np
+import wave
 
 # Initialize TTS engine
 def initialize_tts():
@@ -24,55 +26,30 @@ def speak(text, engine):
     engine.say(text)
     engine.runAndWait()
 
-# Speech-to-Text function using Vosk (AI-powered offline recognition)
+# Replace the vosk imports with whisper
+import whisper
+import sounddevice as sd
+import numpy as np
+import wave
+
 def listen():
-    # Load model - only done once and reused for subsequent calls
+    # Load model - only done once and reused for subsequent calls 
     if not hasattr(listen, "model"):
-        model_path = Path(r"C:\Users\nmdig\CMPSC441\game-ai-lab\lab03\vosk-model-small-en-us-0.15")
-        if not model_path.exists():
-            print("Please download the Vosk model from https://alphacephei.com/vosk/models")
-            print("and extract it to 'vosk-model-small-en-us-0.15' folder in your project directory")
-            return None
-        listen.model = Model(str(model_path))
-        listen.recognizer = KaldiRecognizer(listen.model, 16000)
+        listen.model = whisper.load_model("base")
     
-    # Set up audio stream
-    p = pyaudio.PyAudio()
-    stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)
-    stream.start_stream()
-    
+    # Record audio
+    duration = 5  # seconds
+    fs = 16000  # sample rate
+    recording = sd.rec(int(duration * fs), samplerate=fs, channels=1)
     print("Listening... (speak now)")
+    sd.wait()  # Wait until recording is finished
     
-    # Listen for speech with auto-detection of speech end
-    speaking = False
-    silence_frames = 0
-    max_silence = 30  # About 3 seconds of silence to end recording
+    # Convert to format expected by Whisper
+    audio_data = recording.flatten().astype(np.float32)
     
-    listen.recognizer.Reset()  # Reset the recognizer for a new utterance
-    
-    while True:
-        data = stream.read(4000, exception_on_overflow=False)
-        
-        if listen.recognizer.AcceptWaveform(data):
-            result = json.loads(listen.recognizer.Result())
-            if result.get("text", ""):
-                speaking = True
-                silence_frames = 0
-        
-        # Check for silence after speech has started
-        elif speaking:
-            silence_frames += 1
-            if silence_frames >= max_silence:
-                break
-    
-    # Get final result
-    final_result = json.loads(listen.recognizer.FinalResult())
-    text = final_result.get("text", "")
-    
-    # Clean up
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
+    # Transcribe
+    result = listen.model.transcribe(audio_data)
+    text = result["text"].strip()
     
     if text:
         print(f"You said: {text}")
@@ -80,7 +57,6 @@ def listen():
     else:
         print("Sorry, I couldn't understand that.")
         return None
-
 # Process special commands
 def process_command(command):
     global use_tts, use_stt
